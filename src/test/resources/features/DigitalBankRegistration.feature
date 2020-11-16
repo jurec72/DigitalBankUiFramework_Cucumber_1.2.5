@@ -10,7 +10,7 @@ Feature: Register to Digital Bank application
       | JohnDoe@testemail.com | Password1 |
     Then User successfully logged in to home page
 
-@error
+  @error
   Scenario: Error message Validation for Invalid Password
 
     Given User navigates to Digital Bank login page
@@ -34,11 +34,12 @@ Feature: Register to Digital Bank application
     Then User should be displayed with the error message "Error Invalid credentials or access not granted."
 
 
-   Scenario: As a user, I want to create Digital Bank account
-
+  Scenario: As a user, I want to create Digital Bank account
+    Given User navigates to Digital Bank login page
     Given User navigates to Digital Bank signup page
     And Verify that web title is "Digital Bank"
     When User creates account with following fields
-      | title | firstName | lastName | gender | dob        | password  | address    | locality | region | postalCode | country | homePhone  | mobilePhone | workPhone  |
-      | Mr.   | Jack      | Test     | M      | 12/12/1990 | Tester123 | 12 Main st | City     | CA     | 99921      | US      | 2146591008 | 2136591208  | 1126593008 |
+      | title | firstName | lastName | gender | dob        | password  | address    | locality | region | postalCode | country |
+      | Mr.   | Jack      | Test     | M      | 12/12/1990 | Tester123 | 12 Main st | City     | CA     | 99921      | US      |
     Then User should be displayed with the message "Registration Successful. Please Login."
+    And User can login to the new account

@@ -7,7 +7,8 @@ Feature: home page
     Given User navigates to Digital Bank login page
     And Verify that web title is "Digital Bank"
     When User logs in with following credentials
-      | JohnDoe@testemail.com | Password1 |
+      | username               | password  |
+      | JohnDoe@testemail.com  | Password1 |
     Then Verify that web title is "Digital Bank"
 
   Scenario: As a user, I want to be able to view all details in my account home page
