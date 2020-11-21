@@ -1,4 +1,4 @@
-@home
+
 Feature: home page
 
   description
@@ -7,10 +7,11 @@ Feature: home page
     Given User navigates to Digital Bank login page
     And Verify that web title is "Digital Bank"
     When User logs in with following credentials
-      | username               | password  |
-      | JohnDoe@testemail.com  | Password1 |
+      | username              | password  |
+      | JohnDoe@testemail.com | Password1 |
     Then Verify that web title is "Digital Bank"
 
+  @home
   Scenario: As a user, I want to be able to view all details in my account home page
 
     And Verify that "Welcome John" text is displayed
@@ -99,17 +100,6 @@ Feature: home page
     And User enter name "Marry" into Account Name
     And User clicks on "Submit" button
     And User should get error message "Please fill out this field."
-
-
-
-
-
-
-
-
-
-
-
 
 
 

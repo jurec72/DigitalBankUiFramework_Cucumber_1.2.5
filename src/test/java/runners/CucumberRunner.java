@@ -16,7 +16,7 @@ import cucumber.api.junit.Cucumber;
 @RunWith(Cucumber.class)
 @CucumberOptions(
 
-		plugin= { "json:target/cucumber.json","pretty","html:target/cucumber-report"},
+		plugin= { "json:target/cucumber-json/cucumber.json","pretty","html:target/default-report"},
 
 	    features = {"src/test/resources"},
 		glue = {"steps"},
@@ -26,4 +26,5 @@ import cucumber.api.junit.Cucumber;
 		)
 
 public class CucumberRunner {
+
 }

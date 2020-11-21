@@ -49,7 +49,6 @@ public class DigitalBankRegistrationSteps {
     @When("^User logs in with following credentials$")
     public void user_logs_in_with_following_credentials(DataTable dataTable) throws Throwable {
         List<Map<String, String>> credentials = dataTable.asMaps(String.class, String.class);
-
         driver.findElement(By.id("username")).sendKeys(credentials.get(0).get("username"));
 //        driver.findElement(By.xpath("//input[@id='username']")).sendKeys(credentials.get("username"));
         driver.findElement(By.id("password")).sendKeys(credentials.get(0).get("password"));
@@ -182,7 +181,6 @@ public class DigitalBankRegistrationSteps {
         driver.findElement(By.id("agree-terms")).click();
         //submit button
         driver.findElement(By.xpath("//button[@type='submit']")).click();
-
 
 
     }

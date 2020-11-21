@@ -5,8 +5,16 @@ import cucumber.api.PendingException;
 import cucumber.api.java.en.And;
 import cucumber.api.java.en.Given;
 import cucumber.api.java.en.Then;
+import org.junit.Assert;
+import org.openqa.selenium.By;
+import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.WebElement;
+import utilities.Driver;
+
+import java.util.List;
 
 public class DigitalBankBankingAccountsSteps {
+    WebDriver driver = Driver.getDriver();
 
     @Then("^Verify that \"([^\"]*)\" .* is displayed$")
     public void verify_that_text_is_displayed(String arg1) throws Throwable {
@@ -24,8 +32,19 @@ public class DigitalBankBankingAccountsSteps {
     }
 
     @Then("^Verify that under \"([^\"]*)\" we have options$")
-    public void verify_that_under_we_have_options(String arg1, DataTable arg2) throws Throwable {
+    public void verify_that_under_we_have_options(String mainButton, List<String> buttonOptions) throws Throwable {
+        WebElement headButton = driver.findElement(By.xpath("//a[text()='"+mainButton+"']"));
 
+//        driver.findElement(By.xpath("//a[text()='Savings']"));
+        headButton.click();
+
+        List<WebElement> listOptionButtons = driver.findElements
+                (By.xpath("//a[text()='"+mainButton+"']/following-sibling::" +
+                        "ul[@class='sub-menu children dropdown-menu show']//a"));
+
+        for(int i=0;i<listOptionButtons.size();i++){
+            Assert.assertTrue(buttonOptions.contains(listOptionButtons.get(i).getText()));
+        }
     }
 
     @Then("^User clicks on Checking button$")
