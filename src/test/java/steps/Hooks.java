@@ -14,19 +14,13 @@ public class Hooks {
     @Before
     public void start() {
         logger = LogManager.getLogger();
-
-//        logger.traceEntry();
         logger.traceEntry("Enter the Application");
-//        logger.info("-------Start running scenario--------");
     }
 
     @After
     public void tearDown() {
         Driver.quitDriver();
-
-//        logger.traceExit();
         logger.traceExit("Exit the Application");
-//        logger.info("--------Stop running--------");
     }
 
 }

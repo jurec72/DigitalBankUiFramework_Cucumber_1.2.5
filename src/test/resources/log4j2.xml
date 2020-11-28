@@ -61,7 +61,7 @@
         just need to add path to the class and what level-->
         <!--        name="packageName + . + class name"-->
 <!--        optional-->
-        <Logger name="steps.TestTwo" level="error">
+        <Logger name="steps.log4j2.TestTwo" level="error">
             <!--you tell log4j where you want to see your logs-->
             <AppenderRef ref="FileTwo"/>
         </Logger>

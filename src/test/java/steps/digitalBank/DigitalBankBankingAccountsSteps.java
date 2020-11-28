@@ -1,4 +1,4 @@
-package steps;
+package steps.digitalBank;
 
 import cucumber.api.DataTable;
 import cucumber.api.java.en.And;

@@ -1,6 +1,6 @@
-package steps;
+package steps.log4j2;
 
-import Pages.DigitalBankLoginPage;
+import Pages.digitalBank.DigitalBankLoginPage;
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
 

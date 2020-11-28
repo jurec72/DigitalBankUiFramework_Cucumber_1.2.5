@@ -1,4 +1,4 @@
-package steps;
+package steps.log4j2;
 
 import java.time.LocalDateTime;
 

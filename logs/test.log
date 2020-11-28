@@ -1,43 +1,101 @@
-19:43:31.549 [main] INFO  steps.Test - It is our first log
-19:43:31.554 [main] ERROR steps.Test - I got error from such file
-19:43:31.554 [main] DEBUG steps.Test - I enter login website.
-19:43:31.554 [main] TRACE steps.Test - This is main class
-19:43:31.554 [main] FATAL steps.Test - This is fatal message.
-19:43:31.554 [main] WARN  steps.Test - Be careful.
-19:43:31.554 [main] INFO  steps.Test - This is my title Home Page
-19:43:31.556 [main] INFO  steps.Test - This is my title Home Page
-19:43:31.557 [main] ERROR steps.Test - This is my 5 title Home Page
-19:59:19.377 [main] ERROR steps.TestTwo - I got error from such file
-19:59:19.382 [main] FATAL steps.TestTwo - This is fatal message.
-20:12:28.572 [main] TRACE steps.Hooks - Enter
-20:12:28.578 [main] TRACE steps.Hooks - Enter Enter the Application
-20:12:28.579 [main] INFO  steps.Hooks - -------Start running scenario--------
-20:12:35.698 [main] TRACE steps.Hooks - Exit
-20:12:35.698 [main] TRACE steps.Hooks - Exit with(Exit the Application)
-20:12:35.698 [main] INFO  steps.Hooks - --------Stop running--------
-20:24:27.212 [main] INFO  steps.Test - It is our first log
-20:24:27.222 [main] ERROR steps.Test - I got error from such file
-20:24:27.222 [main] DEBUG steps.Test - I enter login website.
-20:24:27.222 [main] TRACE steps.Test - This is main class
-20:24:27.223 [main] FATAL steps.Test - This is fatal message.
-20:24:27.223 [main] WARN  steps.Test - Be careful.
-20:24:27.223 [main] INFO  steps.Test - This is my title Home Page
-20:24:27.225 [main] INFO  steps.Test - This is my title Home Page
-20:24:27.226 [main] ERROR steps.Test - This is my 5 title Home Page
-20:24:30.248 [main] ERROR Pages.DigitalBankLoginPage - Gives error on divide1 to 0
-java.lang.ArithmeticException: / by zero
-	at Pages.DigitalBankLoginPage.getName(DigitalBankLoginPage.java:27) [test-classes/:?]
-	at steps.Test.main(Test.java:32) [test-classes/:?]
-20:25:08.307 [main] INFO  steps.Test - It is our first log
-20:25:08.312 [main] ERROR steps.Test - I got error from such file
-20:25:08.312 [main] DEBUG steps.Test - I enter login website.
-20:25:08.312 [main] TRACE steps.Test - This is main class
-20:25:08.312 [main] FATAL steps.Test - This is fatal message.
-20:25:08.312 [main] WARN  steps.Test - Be careful.
-20:25:08.313 [main] INFO  steps.Test - This is my title Home Page
-20:25:08.316 [main] INFO  steps.Test - This is my title Home Page
-20:25:08.316 [main] ERROR steps.Test - This is my 5 title Home Page
-20:25:11.452 [main] ERROR Pages.DigitalBankLoginPage - Gives error on divide1 to 0
-21:11:11.869 [main] TRACE steps.Hooks - Enter Enter the Application
-21:11:14.580 [main] DEBUG steps.DigitalBankRegistrationSteps - Use url http://dbankdemo.com/login
-21:11:34.245 [main] TRACE steps.Hooks - Exit with(Exit the Application)
+11:59:25.529 [main] TRACE steps.Hooks - Enter Enter the Application
+11:59:29.443 [main] TRACE steps.Hooks - Exit with(Exit the Application)
+12:01:06.052 [main] TRACE steps.Hooks - Enter Enter the Application
+12:01:11.981 [main] TRACE steps.Hooks - Exit with(Exit the Application)
+12:18:52.944 [main] TRACE steps.Hooks - Enter Enter the Application
+12:18:59.887 [main] TRACE steps.Hooks - Exit with(Exit the Application)
+12:26:30.185 [main] TRACE steps.Hooks - Enter Enter the Application
+12:26:35.896 [main] INFO  utilities.SeleniumUtils - Opened Website url: https://www.amazon.com/
+12:26:36.350 [main] INFO  utilities.SeleniumUtils - Sent keys to element and text is Selenium book
+12:26:36.502 [main] TRACE steps.Hooks - Exit with(Exit the Application)
+12:34:41.362 [main] TRACE steps.Hooks - Enter Enter the Application
+12:34:47.638 [main] INFO  utilities.SeleniumUtils - Opened Website url: https://www.amazon.com/
+12:34:48.415 [main] INFO  utilities.SeleniumUtils - Sent keys to element and text is Selenium book
+12:34:53.690 [main] INFO  utilities.SeleniumUtils - Successfully clicked on element.
+12:34:53.922 [main] TRACE steps.Hooks - Exit with(Exit the Application)
+13:52:10.883 [main] TRACE steps.Hooks - Enter Enter the Application
+13:52:16.878 [main] INFO  utilities.SeleniumUtils - Opened Website url: https://www.amazon.com/
+13:52:17.445 [main] INFO  utilities.SeleniumUtils - WebElement cleared.
+13:52:17.445 [main] INFO  utilities.SeleniumUtils - Cleared webElement.
+13:52:17.740 [main] INFO  utilities.SeleniumUtils - Sent keys to element and text is Selenium book
+13:52:22.283 [main] INFO  utilities.SeleniumUtils - Successfully clicked on element.
+13:52:52.432 [main] INFO  utilities.SeleniumUtils - WebElement cleared.
+13:52:52.432 [main] INFO  utilities.SeleniumUtils - Cleared webElement.
+13:52:52.583 [main] INFO  utilities.SeleniumUtils - Sent keys to element and text is java OCA book
+13:52:52.866 [main] TRACE steps.Hooks - Exit with(Exit the Application)
+13:53:15.419 [main] TRACE steps.Hooks - Enter Enter the Application
+13:53:28.528 [main] INFO  utilities.SeleniumUtils - Opened Website url: https://www.amazon.com/
+13:53:28.893 [main] INFO  utilities.SeleniumUtils - WebElement cleared.
+13:53:28.893 [main] INFO  utilities.SeleniumUtils - Cleared webElement.
+13:53:29.295 [main] INFO  utilities.SeleniumUtils - Sent keys to element and text is Selenium book
+13:53:31.892 [main] INFO  utilities.SeleniumUtils - Successfully clicked on element.
+13:54:01.973 [main] INFO  utilities.SeleniumUtils - WebElement cleared.
+13:54:01.973 [main] INFO  utilities.SeleniumUtils - Cleared webElement.
+13:54:02.148 [main] INFO  utilities.SeleniumUtils - Sent keys to element and text is java OCA book
+13:54:02.373 [main] TRACE steps.Hooks - Exit with(Exit the Application)
+14:04:23.237 [main] TRACE steps.Hooks - Enter Enter the Application
+14:04:28.958 [main] INFO  utilities.SeleniumUtils - Opened Website url: https://www.amazon.com/
+14:04:29.313 [main] INFO  utilities.SeleniumUtils - WebElement cleared.
+14:04:29.579 [main] INFO  utilities.SeleniumUtils - Sent keys to element and text is Selenium book
+14:04:33.187 [main] INFO  utilities.SeleniumUtils - Successfully clicked on element.
+14:05:03.277 [main] INFO  utilities.SeleniumUtils - WebElement cleared.
+14:05:03.438 [main] INFO  utilities.SeleniumUtils - Sent keys to element and text is java OCA book
+14:05:33.753 [main] TRACE steps.Hooks - Exit with(Exit the Application)
+14:15:52.957 [main] TRACE steps.Hooks - Enter Enter the Application
+14:15:58.479 [main] INFO  utilities.SeleniumUtils - Opened Website url: https://www.amazon.com/
+14:15:59.570 [main] INFO  utilities.SeleniumUtils - WebElement cleared.
+14:15:59.880 [main] INFO  utilities.SeleniumUtils - Sent keys to element and text is Selenium book
+14:16:04.278 [main] INFO  utilities.SeleniumUtils - Successfully clicked on element.
+14:16:34.452 [main] INFO  utilities.SeleniumUtils - WebElement cleared.
+14:16:34.606 [main] INFO  utilities.SeleniumUtils - Sent keys to element and text is java OCA book
+14:16:36.651 [main] INFO  utilities.SeleniumUtils - Successfully clicked on element.
+14:17:07.373 [main] TRACE steps.Hooks - Exit with(Exit the Application)
+14:18:10.060 [main] TRACE steps.Hooks - Enter Enter the Application
+14:18:16.404 [main] INFO  utilities.SeleniumUtils - Opened Website url: https://www.amazon.com/
+14:18:16.756 [main] INFO  utilities.SeleniumUtils - WebElement cleared.
+14:18:17.169 [main] INFO  utilities.SeleniumUtils - Sent keys to element and text is Selenium book
+14:18:21.496 [main] INFO  utilities.SeleniumUtils - Successfully clicked on element.
+14:18:51.606 [main] INFO  utilities.SeleniumUtils - WebElement cleared.
+14:18:51.781 [main] INFO  utilities.SeleniumUtils - Sent keys to element and text is java OCA book
+14:18:54.868 [main] INFO  utilities.SeleniumUtils - Successfully clicked on element.
+14:19:25.425 [main] TRACE steps.Hooks - Exit with(Exit the Application)
+14:20:03.099 [main] TRACE steps.Hooks - Enter Enter the Application
+14:20:10.221 [main] INFO  utilities.SeleniumUtils - Opened Website url: https://www.amazon.com/
+14:20:10.616 [main] INFO  utilities.SeleniumUtils - WebElement cleared.
+14:20:10.954 [main] INFO  utilities.SeleniumUtils - Sent keys to element and text is Selenium book
+14:20:14.521 [main] INFO  utilities.SeleniumUtils - Successfully clicked on element.
+14:20:44.660 [main] INFO  utilities.SeleniumUtils - WebElement cleared.
+14:20:44.819 [main] INFO  utilities.SeleniumUtils - Sent keys to element and text is java OCA book
+14:20:46.801 [main] INFO  utilities.SeleniumUtils - Successfully clicked on element.
+14:22:19.768 [main] TRACE steps.Hooks - Enter Enter the Application
+14:22:30.702 [main] INFO  utilities.SeleniumUtils - Opened Website url: https://www.amazon.com/
+14:22:32.306 [main] INFO  utilities.SeleniumUtils - WebElement cleared.
+14:22:32.584 [main] INFO  utilities.SeleniumUtils - Sent keys to element and text is Selenium book
+14:22:36.876 [main] INFO  utilities.SeleniumUtils - Successfully clicked on element.
+14:22:37.371 [main] INFO  utilities.SeleniumUtils - WebElement text is Selenium Testing Tools Cookbook - Second Edition
+14:22:37.489 [main] INFO  utilities.SeleniumUtils - WebElement cleared.
+14:22:37.814 [main] INFO  utilities.SeleniumUtils - Sent keys to element and text is java OCA book
+14:22:40.336 [main] INFO  utilities.SeleniumUtils - Successfully clicked on element.
+14:22:40.452 [main] INFO  utilities.SeleniumUtils - WebElement text is Java For Dummies (For Dummies (Computers))
+14:22:40.518 [main] INFO  utilities.SeleniumUtils - WebElement text is Java All-in-One For Dummies, 6th Edition (For Dummies (Computer/Tech))
+14:22:40.571 [main] INFO  utilities.SeleniumUtils - WebElement text is OCA: Oracle Certified Associate Java SE 8 Programmer I Study Guide: Exam 1Z0-808
+14:22:40.602 [main] INFO  utilities.SeleniumUtils - WebElement text is OCA / OCP Java SE 8 Programmer Certification Kit: Exam 1Z0-808 and Exam 1Z0-809
+14:22:40.759 [main] INFO  utilities.SeleniumUtils - WebElement text is OCA / OCP Java SE 8 Programmer Practice Tests
+14:22:40.803 [main] INFO  utilities.SeleniumUtils - WebElement text is OCP Oracle Certified Professional Java SE 11 Programmer I Study Guide: Exam 1Z0-815
+14:22:40.842 [main] INFO  utilities.SeleniumUtils - WebElement text is OCP Oracle Certified Professional Java SE 11 Developer Complete Study Guide: Exam 1Z0-815, Exam 1Z0-816, and Exam 1Z0-817
+14:22:40.871 [main] INFO  utilities.SeleniumUtils - WebElement text is OCA Java SE 8 Programmer I Exam Guide (Exams 1Z0-808)
+14:22:40.897 [main] INFO  utilities.SeleniumUtils - WebElement text is OCP Java SE 8 Programmer II Exam Guide (Exam 1Z0-809)
+14:22:40.918 [main] INFO  utilities.SeleniumUtils - WebElement text is OCA/OCP Java SE 8 Programmer Certification Bundle (Exams 1Z0-808 and 1Z0-809)
+14:22:40.942 [main] INFO  utilities.SeleniumUtils - WebElement text is OCA / OCP Java SE 8 Programmer Certification Kit: Exam 1Z0-808 and Exam 1Z0-809
+14:22:40.962 [main] INFO  utilities.SeleniumUtils - WebElement text is Java/J2EE Interview Questions You'll Most Likely Be Asked (Job Interview Questions)
+14:22:40.981 [main] INFO  utilities.SeleniumUtils - WebElement text is OCA Java SE 8 Programmer I Certification Guide
+14:22:41.000 [main] INFO  utilities.SeleniumUtils - WebElement text is Oracle Certified Associate Java SE 8 Programmer I 1Z0-808 Practice Tests: 424 Questions to assess your OCA preparation (Updated in September 2020) (Java Certification Book 1)
+14:22:41.020 [main] INFO  utilities.SeleniumUtils - WebElement text is OCA Java SE 8 Programmer I Study Guide (Exam 1Z0-808) (Oracle Press)
+14:22:41.039 [main] INFO  utilities.SeleniumUtils - WebElement text is OCFA Java Foundations Exam Fundamentals 1Z0-811: Study guide for Oracle Certified Foundations Associate, Java Certification
+14:22:41.058 [main] INFO  utilities.SeleniumUtils - WebElement text is OCAJP Associate Java 8 Programmer Certification Fundamentals: 1Z0-808
+14:22:41.078 [main] INFO  utilities.SeleniumUtils - WebElement text is Programmer's Guide to Java SE 8 Oracle Certified Associate (OCA), A
+14:22:41.099 [main] INFO  utilities.SeleniumUtils - WebElement text is Java: A Beginner's Guide, Eighth Edition
+14:22:41.118 [main] INFO  utilities.SeleniumUtils - WebElement text is OCP Oracle Certified Professional Java SE 11 Programmer II Study Guide: Exam 1Z0-816 and Exam 1Z0-817
+14:22:41.136 [main] INFO  utilities.SeleniumUtils - WebElement text is OCA / OCP Java SE 8 Programmer Practice Tests
+14:22:41.154 [main] INFO  utilities.SeleniumUtils - WebElement text is OCP Oracle Certified Professional Java SE 11 Developer Complete Study Guide: Exam 1Z0-815, Exam 1Z0-816, and Exam 1Z0-817
+14:22:41.301 [main] TRACE steps.Hooks - Exit with(Exit the Application)
