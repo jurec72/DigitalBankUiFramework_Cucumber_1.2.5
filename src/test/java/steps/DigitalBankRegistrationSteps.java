@@ -8,6 +8,8 @@ import cucumber.api.java.en.Given;
 import cucumber.api.java.en.Then;
 import cucumber.api.java.en.When;
 import domains.User;
+import org.apache.logging.log4j.LogManager;
+import org.apache.logging.log4j.Logger;
 import org.assertj.core.api.Assertions;
 import org.junit.Assert;
 import org.openqa.selenium.By;
@@ -26,7 +28,6 @@ import java.util.Map;
  */
 public class DigitalBankRegistrationSteps {
 
-
     WebDriver driver = Driver.getDriver();
     private final String LOGIN_PAGE_URL = "http://dbankdemo.com/login";
     private final String HOME_PAGE_URL = "http://dbankdemo.com/home";
@@ -34,23 +35,42 @@ public class DigitalBankRegistrationSteps {
     private String password;
     private String title;
 
+
+    private static final Logger LOG = LogManager.getLogger(DigitalBankRegistrationSteps.class.getName());
+
     @Given("^User navigates to Digital Bank login page$")
     public void user_navigates_to_digital_bank_login_page() {
+        LOG.debug("Use url {}", LOGIN_PAGE_URL);
         driver.get(LOGIN_PAGE_URL);
-        Assertions.assertThat(driver.getCurrentUrl()).isEqualTo(LOGIN_PAGE_URL);
+        LOG.info("Login page is opened!");
+        try {
+            LOG.debug("Assert that actual url is as expected");
+            Assertions.assertThat(driver.getCurrentUrl()).isEqualTo(LOGIN_PAGE_URL);
+            LOG.info("Assertion for URL is passed.");
+        }catch(Exception e){
+            LOG.error("error is here");
+            throw e;
+        }
+
+
+        String title = driver.getTitle();
+        if(title.equals("Home Page")){
+            LOG.error("");
+        }
+
     }
 
     @Given("^Verify that web title is \"([^\"]*)\"$")
     public void verify_that_web_title_is(String title) throws Throwable {
         Assertions.assertThat(driver.getTitle()).isEqualTo(title);
         this.title = title;
+        LOG.info("Title - {} - is correct.", title);
     }
 
     @When("^User logs in with following credentials$")
     public void user_logs_in_with_following_credentials(DataTable dataTable) throws Throwable {
         List<Map<String, String>> credentials = dataTable.asMaps(String.class, String.class);
         driver.findElement(By.id("username")).sendKeys(credentials.get(0).get("username"));
-//        driver.findElement(By.xpath("//input[@id='username']")).sendKeys(credentials.get("username"));
         driver.findElement(By.id("password")).sendKeys(credentials.get(0).get("password"));
         driver.findElement(By.id("submit")).click();
 
@@ -88,8 +108,6 @@ public class DigitalBankRegistrationSteps {
 
     @When("^User creates account with following fields$")
     public void user_creates_account_with_following_fields(DataTable dataTable) throws Throwable {
-//        Login.makeGeristration(dataTable)
-
         //generate random data
         Faker fake = new Faker();
 
@@ -99,28 +117,28 @@ public class DigitalBankRegistrationSteps {
         String mobilePhone = fake.regexify("\\([0-8]\\d{2}\\)\\d{3}-\\d{4}");
         String workPhone = fake.regexify("\\([0-8]\\d{2}\\)\\d{3}-\\d{4}");
 
-//save datatable from feature file
+        //save datatable from feature file
         List<User> userList = dataTable.asList(User.class);
 
         //save data on class level to use in the next step
         username = email;
         password = userList.get(0).getPassword();
 
-//select title Mr.
+        //select title Mr.
         WebElement selectTitle = driver.findElement(By.id("title"));
 
         Select select = new Select(selectTitle);
         select.selectByValue(userList.get(0).getTitle());
 
         //enter firstname
+        LOG.info("Enter firstname");
         WebElement firstName = driver.findElement(By.id("firstName"));
         firstName.sendKeys(userList.get(0).getFirstName());
-//enter Lastname
+        //enter Lastname
         WebElement lastName = driver.findElement(By.id("lastName"));
         lastName.sendKeys(userList.get(0).getLastName());
 
-//selevt gender bynamicly
-
+         //select gender dynamicly
         List<WebElement> gender = driver.findElements(By.id("gender"));
 
         for (WebElement element : gender) {
@@ -128,10 +146,6 @@ public class DigitalBankRegistrationSteps {
                 element.click();
             }
         }
-//select randomly gender
-//        int randomGender = Integer.valueOf(fake.regexify("[1-2]"));
-//        gender.get(randomGender).click();
-
         //dateOfBirth
         WebElement dob = driver.findElement(By.id("dob"));
         dob.sendKeys(userList.get(0).getDob());
@@ -201,4 +215,6 @@ public class DigitalBankRegistrationSteps {
         Assertions.assertThat(driver.getTitle()).isEqualTo(title);
     }
 }
+
+
 

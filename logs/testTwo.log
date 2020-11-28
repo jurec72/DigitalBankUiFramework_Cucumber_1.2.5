@@ -1,0 +1,2 @@
+19:59:19.377 [main] ERROR steps.TestTwo - I got error from such file
+19:59:19.382 [main] FATAL steps.TestTwo - This is fatal message.

@@ -14,7 +14,7 @@ Feature: home page
   @home
   Scenario: As a user, I want to be able to view all details in my account home page
 
-    And Verify that "Welcome John" text is displayed
+    And Verify that "Welcome John " text is displayed
     And Verify that panel with account information is displayed
     #replace below steps with one step above to make less code
 #    And Verify that "Home" button is displayed
@@ -36,7 +36,7 @@ Feature: home page
 
     And Verify that "Welcome John" text is displayed
 
-    And User clicks on "Checking" button
+    And User clicks on Checking button
     And Verify that under "Checking" we have options
       | View Checking | New Checking |
 
@@ -56,8 +56,8 @@ Feature: home page
     And Verify that "Initial Deposit Amount" text is displayed
     And Verify that input field accepts accepts numeric whole or decimal values
     And Verify that "ex. Minimum opening deposit is $25.00" text is displayed
-    And Verify that "Submit" button is displayed
-    And Verify that "Reset" button is displayed
+    And Verify that Submit button is displayed
+    And Verify that Reset button is displayed
 
 
   Scenario: As a User, I get error message when submit empty fields
@@ -65,7 +65,7 @@ Feature: home page
     And User clicks on Checking button
     And User clicks on New Checking button
     And Verify that "New Checking Account" text is displayed
-    And User clicks on "Submit" button
+    And User clicks on Submit button
     And User should get error message "Please select one of these options."
 
 
@@ -75,18 +75,18 @@ Feature: home page
     And User clicks on New Checking button
     And Verify that "New Checking Account" text is displayed
     And User clicks on "Standard Checking" radio buttons
-    And User clicks on "Submit" button
+    And User clicks on Submit button
     And User should get error message "Please select one of these options."
 
 
   Scenario: As a User, I get error message when submit empty fields on Account Name
 
-    And User clicks on Checking button
+    Then User clicks on Checking button
     And User clicks on New Checking button
     And Verify that "New Checking Account" text is displayed
     And User clicks on "Standard Checking" radio buttons
     And User clicks on "Individuals" radio buttons
-    And User clicks on "Submit" button
+    And User clicks on Submit button
     And User should get error message "Please fill out this field."
 
 
@@ -98,7 +98,7 @@ Feature: home page
     And User clicks on "Standard Checking" radio buttons
     And User clicks on "Individuals" radio buttons
     And User enter name "Marry" into Account Name
-    And User clicks on "Submit" button
+    And User clicks on Submit button
     And User should get error message "Please fill out this field."
 
 

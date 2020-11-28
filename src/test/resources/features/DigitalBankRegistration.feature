@@ -10,7 +10,7 @@ Feature: Register to Digital Bank application
       | JohnDoe@testemail.com | Password1 |
     Then User successfully logged in to home page
 
-  @error
+
   Scenario: Error message Validation for Invalid Password
 
     Given User navigates to Digital Bank login page
@@ -33,7 +33,7 @@ Feature: Register to Digital Bank application
     When User logs in with "Invalid@testemail.com" and "123"
     Then User should be displayed with the error message "Error Invalid credentials or access not granted."
 
-
+  @error
   Scenario: As a user, I want to create Digital Bank account
     Given User navigates to Digital Bank login page
     Given User navigates to Digital Bank signup page

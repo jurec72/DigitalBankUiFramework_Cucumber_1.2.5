@@ -1,0 +1,43 @@
+19:43:31.549 [main] INFO  steps.Test - It is our first log
+19:43:31.554 [main] ERROR steps.Test - I got error from such file
+19:43:31.554 [main] DEBUG steps.Test - I enter login website.
+19:43:31.554 [main] TRACE steps.Test - This is main class
+19:43:31.554 [main] FATAL steps.Test - This is fatal message.
+19:43:31.554 [main] WARN  steps.Test - Be careful.
+19:43:31.554 [main] INFO  steps.Test - This is my title Home Page
+19:43:31.556 [main] INFO  steps.Test - This is my title Home Page
+19:43:31.557 [main] ERROR steps.Test - This is my 5 title Home Page
+19:59:19.377 [main] ERROR steps.TestTwo - I got error from such file
+19:59:19.382 [main] FATAL steps.TestTwo - This is fatal message.
+20:12:28.572 [main] TRACE steps.Hooks - Enter
+20:12:28.578 [main] TRACE steps.Hooks - Enter Enter the Application
+20:12:28.579 [main] INFO  steps.Hooks - -------Start running scenario--------
+20:12:35.698 [main] TRACE steps.Hooks - Exit
+20:12:35.698 [main] TRACE steps.Hooks - Exit with(Exit the Application)
+20:12:35.698 [main] INFO  steps.Hooks - --------Stop running--------
+20:24:27.212 [main] INFO  steps.Test - It is our first log
+20:24:27.222 [main] ERROR steps.Test - I got error from such file
+20:24:27.222 [main] DEBUG steps.Test - I enter login website.
+20:24:27.222 [main] TRACE steps.Test - This is main class
+20:24:27.223 [main] FATAL steps.Test - This is fatal message.
+20:24:27.223 [main] WARN  steps.Test - Be careful.
+20:24:27.223 [main] INFO  steps.Test - This is my title Home Page
+20:24:27.225 [main] INFO  steps.Test - This is my title Home Page
+20:24:27.226 [main] ERROR steps.Test - This is my 5 title Home Page
+20:24:30.248 [main] ERROR Pages.DigitalBankLoginPage - Gives error on divide1 to 0
+java.lang.ArithmeticException: / by zero
+	at Pages.DigitalBankLoginPage.getName(DigitalBankLoginPage.java:27) [test-classes/:?]
+	at steps.Test.main(Test.java:32) [test-classes/:?]
+20:25:08.307 [main] INFO  steps.Test - It is our first log
+20:25:08.312 [main] ERROR steps.Test - I got error from such file
+20:25:08.312 [main] DEBUG steps.Test - I enter login website.
+20:25:08.312 [main] TRACE steps.Test - This is main class
+20:25:08.312 [main] FATAL steps.Test - This is fatal message.
+20:25:08.312 [main] WARN  steps.Test - Be careful.
+20:25:08.313 [main] INFO  steps.Test - This is my title Home Page
+20:25:08.316 [main] INFO  steps.Test - This is my title Home Page
+20:25:08.316 [main] ERROR steps.Test - This is my 5 title Home Page
+20:25:11.452 [main] ERROR Pages.DigitalBankLoginPage - Gives error on divide1 to 0
+21:11:11.869 [main] TRACE steps.Hooks - Enter Enter the Application
+21:11:14.580 [main] DEBUG steps.DigitalBankRegistrationSteps - Use url http://dbankdemo.com/login
+21:11:34.245 [main] TRACE steps.Hooks - Exit with(Exit the Application)

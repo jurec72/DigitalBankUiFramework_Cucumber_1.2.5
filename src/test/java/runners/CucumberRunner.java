@@ -21,7 +21,7 @@ import cucumber.api.junit.Cucumber;
 	    features = {"src/test/resources"},
 		glue = {"steps"},
 
-		tags = "@error",
+		tags = "@login",
 		dryRun = false
 		)
 

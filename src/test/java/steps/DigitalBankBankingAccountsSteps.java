@@ -1,9 +1,7 @@
 package steps;
 
 import cucumber.api.DataTable;
-import cucumber.api.PendingException;
 import cucumber.api.java.en.And;
-import cucumber.api.java.en.Given;
 import cucumber.api.java.en.Then;
 import org.junit.Assert;
 import org.openqa.selenium.By;
@@ -16,8 +14,12 @@ import java.util.List;
 public class DigitalBankBankingAccountsSteps {
     WebDriver driver = Driver.getDriver();
 
-    @Then("^Verify that \"([^\"]*)\" .* is displayed$")
+    @Then("^Verify that \"([^\"]*)\" (label|header|text) is displayed$")
     public void verify_that_text_is_displayed(String arg1) throws Throwable {
+        System.out.println(driver.findElement(By.xpath(String.format("//*[contains(text(),'%s')]", arg1))).getText());
+
+        driver.findElement(By.xpath(String.format("//*[text()='%s']", arg1))); //div[text()='Welcome John']
+        driver.findElement(By.xpath("//*[text()='" + arg1 + "']"));// //div[text()='Welcome John']
 
     }
 
@@ -26,23 +28,18 @@ public class DigitalBankBankingAccountsSteps {
 
     }
 
-    @Then("^User clicks on \"([^\"]*)\" button$")
-    public void user_clicks_on_button(String button) throws Throwable {
-
-    }
-
     @Then("^Verify that under \"([^\"]*)\" we have options$")
     public void verify_that_under_we_have_options(String mainButton, List<String> buttonOptions) throws Throwable {
-        WebElement headButton = driver.findElement(By.xpath("//a[text()='"+mainButton+"']"));
+        WebElement headButton = driver.findElement(By.xpath("//a[text()='" + mainButton + "']"));
 
 //        driver.findElement(By.xpath("//a[text()='Savings']"));
         headButton.click();
 
         List<WebElement> listOptionButtons = driver.findElements
-                (By.xpath("//a[text()='"+mainButton+"']/following-sibling::" +
+                (By.xpath("//a[text()='" + mainButton + "']/following-sibling::" +
                         "ul[@class='sub-menu children dropdown-menu show']//a"));
 
-        for(int i=0;i<listOptionButtons.size();i++){
+        for (int i = 0; i < listOptionButtons.size(); i++) {
             Assert.assertTrue(buttonOptions.contains(listOptionButtons.get(i).getText()));
         }
     }
@@ -90,5 +87,20 @@ public class DigitalBankBankingAccountsSteps {
     @And("^User enter name \"([^\"]*)\" into Account Name$")
     public void userEnterNameIntoAccountName(String arg0) throws Throwable {
 
+    }
+
+    @And("^Verify that Submit button is displayed$")
+    public void verifyThatSubmitButtonIsDisplayed() {
+
+
+    }
+
+    @And("^Verify that Reset button is displayed$")
+    public void verifyThatResetButtonIsDisplayed() {
+
+    }
+
+    @And("^User clicks on Submit button$")
+    public void userClicksOnSubmitButton() {
     }
 }
